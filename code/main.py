@@ -39,7 +39,7 @@ def download_image(url):
 
 
 def download_model(bucket='', key=''):
-     print("hello model")
+    print("hello model")
     location = f'/tmp/{os.path.basename(key)}'
     if not os.path.exists(location):
         s3_resource.Object(bucket, key).download_file(location)
@@ -47,7 +47,7 @@ def download_model(bucket='', key=''):
 
 
 def classify_image(model_path, img):
-     print("hello classify")
+    print("hello classify")
     model = torch.jit.load(model_path)
     img = img_tranforms(img).unsqueeze(0)
     cl = model(img).argmax().item()
