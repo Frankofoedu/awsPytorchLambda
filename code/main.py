@@ -23,6 +23,8 @@ img_tranforms = transforms.Compose([
                          [0.229, 0.224, 0.225])
 ])
 
+print("done")
+
 
 def download_image(url):
     print("download image")
