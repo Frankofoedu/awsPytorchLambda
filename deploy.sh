@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir -p packages
-cp -r ./venv/lib64/python3.6/site-packages/* packages
+cp -r ./venv/lib/python3.7/site-packages/* packages
 cd packages
 find . -type d -name "tests" -exec rm -rf {} +
 find . -type d -name "__pycache__" -exec rm -rf {} +
