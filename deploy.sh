@@ -17,6 +17,3 @@ cd ./code
 zip -rg ${OLDPWD}/pytorch_fn.zip .
 cd $OLDPWD
 rm -r packages
-# copy to s3 and update lambda function
-aws s3 cp pytorch_fn.zip s3://lambda-functions/
-aws lambda update-function-code --function-name pytorch_example \   --s3-bucket lambda-functions --s3-key pytorch_fn.zip
